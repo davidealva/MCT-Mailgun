@@ -1,0 +1,5 @@
+Admin.create(email: "davidealva@gmail.com", password: "peelo5141")
+Prize.create(name:'15% off Digital Release of "Machines Can Talk" Album', number_of_referrals: 5, image_file_name: nil, image_content_type: nil, image_file_size: nil, image_updated_at: nil)
+Prize.create(name:'Free Download on Bandcamp + 15% off "Machines Can Talk" Album', number_of_referrals: 10, image_file_name: nil, image_content_type: nil, image_file_size: nil, image_updated_at: nil)
+Prize.create(name:'Free Digital Download of "Machines Can Talk" Album', number_of_referrals: 20, image_file_name: nil, image_content_type: nil, image_file_size: nil, image_updated_at: nil)
+Prize.create(name:'Free Digital Copy of "Machines Can Talk" + Entry to Win Special Gift Packages', number_of_referrals: 50, image_file_name: nil, image_content_type: nil, image_file_size: nil, image_updated_at: nil)

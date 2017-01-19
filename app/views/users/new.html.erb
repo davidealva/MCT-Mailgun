@@ -1,0 +1,29 @@
+<header style="background-image: url(<%= asset_url(Setting.cover_image.url) %>); background-position: center;">
+		<div class="container cover">
+				<div id="center"class="row">
+					<div class="box-left col-lg-6 col-md-12 col-sm-12 col-xs-12">
+						<div id="info">
+							<%= image_tag "logo_white.png", class: 'img-responsive' %>
+							<h1 class="cover-title">A New Album by David Alvarado</h1>
+							<h2>Request Your Exclusive Pre Release Access Now!</h2>
+							<h3 class="cover-subtitle">Join us for early access and your chance for a Free copy of David Alvarado's forthcoming release and a chance at future giveaway's and prizes.</h3>
+							<div id="form-wrapper">
+								<%= render "form" %>
+								<small>* We don't share your info, we promise to protect your privacy.</small>
+							</div>
+						</div>
+					</div>
+					<div class="box-right col-lg-6 col-md-12 col-sm-12 col-xs-12">
+						<div id="album">
+							<%= image_tag "cover.jpg", class: 'center-block img-responsive' %>
+						</div>
+					</div>
+				</div>
+		</div>
+</header>
+
+<footer>
+		<div class="container">
+				<p class="text-center"><a href="http://madebydiesel.com">MadeByDiesel.com</a> | <a href="mailto:human@machinescantalk.com?subject=Question%20For%20Machines%20Can%20Talk">Press Contact</a></p>
+		</div>
+</footer>

@@ -1,0 +1,46 @@
+<section id="content-wrapper">
+	<main id="content">
+		<div class="row">
+		<div id="refer" style="background-position: center; background-image: <%= Setting.additional_image.present? ? 'url(' + asset_url(Setting.additional_image.url) + ');' : 'auto' %>">
+				  <div class="col-md-5 col-md-offset-1 col-sm-6 hidden-xs refer-left"></div>
+				  <div class="col-md-5 col-sm-6 col-xs-12">
+				    <div id="copy">
+				      <h3>Don't leave your friends behind </h3>
+				      <h1>Invite friends & Earn Greater Rewards</h1>
+				    </div>
+				    <input class="form-control" value="<%= @user.referral_url(root_url) %>"></input>
+				    <p>Share your unique link via email or your social networks and earn prizes and discounts for each friend who signs up.</p>
+				    <%= render partial: "social_sharing" %>
+				  </div>
+		</div>
+		</div>
+		<div id="middle" class="row">
+		<aside class="text-center">
+			<div class="message">
+				<h3>Use your personal link to check back anytime and see the prizes you've earned</h3>
+			</div>
+			<div class="">
+				<h3>
+					<strong>
+						<%= pluralize(@user.number_of_referrals, 'friend') %>
+					</strong>
+					<span>have joined so far. </span>
+				</h3>
+			</div>
+		</aside>
+		<% if Prize.all.any? %>
+		  <section id="prizes">
+		    <div class="progressbar" style="width: <%= @user.progress * 100 %>%">
+		      <div class="progress-box"></div>
+		    </div>
+		    <%= render partial: "prizes/prize_item", collection: Prize.all.order("number_of_referrals asc"), as: :prize %>
+		  </section>
+		<% end %>
+		</div>
+		<footer id="footer">
+			<div class="container">
+					<p class="text-center"><a href="http://madebydiesel.com">MadeByDiesel.com</a> |  <a href="mailto:human@machinescantalk.com?subject=Question%20For%20Machines%20Can%20Talk">Press Contact</a></p><%= link_to "Privacy Policy", privacy_path, remote: true %></p>
+			</div>
+		</footer>
+	</main>
+</section>
