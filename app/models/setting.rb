@@ -21,8 +21,8 @@ class Setting < ActiveRecord::Base
 	after_save :clear_cache
 
 
-	MAILCHIMP_API_KEY = "7848f34b062305c638a86126fe38d29f-us14"
-	MAILCHIMP_LIST_ID = "9b4d0627a4"
+	MAILCHIMP_API_KEY = nil
+	MAILCHIMP_LIST_ID = nil
 
 	def self.cover_image
 		(Setting.first || Setting.new).cover_image
